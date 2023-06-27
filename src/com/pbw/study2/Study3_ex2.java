@@ -38,8 +38,8 @@ public class Study3_ex2 {
 					System.out.println("당신의 실 급여는 건강보험 3%, 국민연금 2%, 고용보험 1%, 산재보험 1%를 제외한 " + sal*0.93 + " 원 입니다.");
 				}else if(job==2) {
 					System.out.println("급여를 입력하세요");
-					int sal2 = sc.nextInt();
-					System.out.println("당신의 실 급여는 원청징수 3.3%를 제외한 " + sal2*0.967 + " 원 입니다.");
+					int sal = sc.nextInt();
+					System.out.println("당신의 실 급여는 원청징수 3.3%를 제외한 " + sal*0.967 + " 원 입니다.");
 				}else {
 					System.out.println("처음부터 다시 입력해주세요");
 				}
