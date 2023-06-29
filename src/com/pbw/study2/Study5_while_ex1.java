@@ -107,22 +107,7 @@ public class Study5_while_ex1 {
 //		System.out.println("프로그램종료");
 
 
-//		while(check) {
-//			System.out.println("1. 로그인 // 2. 종료");
-//			int select=sc.nextInt();
-//			if(select==1) {
-//				System.out.println("id입력");
-//				int yid=sc.nextInt();
-//				System.out.println("pw입력");
-//				int ypw=sc.nextInt();
-//				if(id==yid&&pw==ypw) {
-//					System.out.println("로그인 성공");
-//					break;
-//				}else {
-//					break;
-//				}
-//			}
-//		}//while끝
+		
 		
 		
 		
