@@ -1,5 +1,7 @@
 package com.pbw.study4.s2;
 
+import java.util.Scanner;
+
 public class StudentController {
 	
 	public void start() {
@@ -9,7 +11,35 @@ public class StudentController {
 //		     SM
 //		     |
 //		SS - SC - SV
+		Scanner sc = new Scanner(System.in);
 		
+		int select = 0;
+		
+		StudentSurvice studentSurvice = new StudentSurvice();
+		StudentView studentView = new StudentView();
+		Student [] students =null;
+		
+		while(true) {
+			System.out.println("1. 학생정보생성");
+			System.out.println("2. 학생정보출력");
+			System.out.println("3. 학생정보검색");
+			System.out.println("4. 프로그램종료");
+			select = sc.nextInt();
+			if(select == 1) {
+				students = studentSurvice.makeStudents();
+			}else if(select == 2) {
+				studentView.view(students);
+			}else if(select == 3) {
+				//1. findByNum
+				Student student = studentSurvice.findByNum(students);
+				//2. viewOne
+				studentView.view(student);
+			}else {
+				System.out.println("종료합니다.");
+				break;
+			}
+			
+		}
 		
 	}
 

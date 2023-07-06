@@ -4,6 +4,25 @@ import java.util.Scanner;
 
 public class StudentSurvice {
 	
+	public Student findByNum(Student [] students) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("찾으려고 하는 학생의 번호를 입력하세요");
+		int num = sc.nextInt();
+		
+		Student student= null;
+	
+		
+		for(int i=0; i<students.length; i++) {
+			if(num==students[i].getNum()) {
+				student = students[i];
+				break;
+			}
+		}
+		
+		return student;
+	}
+	
+	
 	public Student makeStudentOne() {
 		//학생 1명 만들어서 이름, 번호, 국어, 영어, 수학 점수 입력
 		//총점 평균을 계산
@@ -11,17 +30,17 @@ public class StudentSurvice {
 		Scanner sc = new Scanner(System.in);
 		Student student = new Student();
 		System.out.println("이름을 입력");
-		student.name=sc.next();
+		student.setName(sc.next());
 		System.out.println("번호를 입력");
-		student.num=sc.nextInt();
+		student.setNum(sc.nextInt());
 		System.out.println("국어점수를 입력");
-		student.kor=sc.nextInt();
+		student.setKor(sc.nextInt());
 		System.out.println("영어점수를 입력");
-		student.eng=sc.nextInt();
+		student.setEng(sc.nextInt());
 		System.out.println("수학점수를 입력");
-		student.math=sc.nextInt();
-		student.total=student.kor + student.eng + student.math;
-		student.avg = student.total / 3.0;
+		student.setMath(sc.nextInt());
+		student.setTotal(student.getKor() + student.getEng() + student.getMath());
+		student.setAvg(student.getTotal() / 3.0);
 		
 		return student;
 		
@@ -45,24 +64,25 @@ public class StudentSurvice {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("학생 수 입력");
 		int count = sc.nextInt();
-		
 		Student [] students = new Student[count];
 		
 		for(int i=0; i<count; i++) {
 			Student student = new Student();
 			System.out.println("이름을 입력");
-			student.name=sc.next();
+			student.setName(sc.next());
 			System.out.println("번호를 입력");
-			student.num=sc.nextInt();
+			student.setNum(sc.nextInt());
 			System.out.println("국어점수를 입력");
-			student.kor=sc.nextInt();
+			student.setKor(sc.nextInt());
 			System.out.println("영어점수를 입력");
-			student.eng=sc.nextInt();
+			student.setEng(sc.nextInt());
 			System.out.println("수학점수를 입력");
-			student.math=sc.nextInt();
-			student.total=student.kor + student.eng + student.math;
-			student.avg = student.total / 3.0;
+			student.setMath(sc.nextInt());
+			student.cal();
+//			student.total=student.kor + student.eng + student.math;
+//			student.avg = student.total / 3.0;
 			students[i]=student;
 
 		}

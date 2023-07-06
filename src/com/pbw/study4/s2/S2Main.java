@@ -4,13 +4,12 @@ public class S2Main {
 
 	public static void main(String[] args) {
 		
-		StudentSurvice studentSurvice = new StudentSurvice();
+//		StudentSurvice studentSurvice = new StudentSurvice();
+//		
+//		studentSurvice.makeStudentOne();
 		
-		studentSurvice.makeStudentOne();
-		
-		
-		
-//		System.out.println(students.length);
+		StudentController studentController = new StudentController();
+		studentController.start();
 
 
 	}
