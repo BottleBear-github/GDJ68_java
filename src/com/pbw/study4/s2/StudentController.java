@@ -1,5 +1,6 @@
 package com.pbw.study4.s2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StudentController {
@@ -27,11 +28,12 @@ public class StudentController {
 			select = sc.nextInt();
 			if(select == 1) {
 				students = studentSurvice.makeStudents();
+//				System.out.println(Arrays.toString(students));
 			}else if(select == 2) {
 				studentView.view(students);
 			}else if(select == 3) {
 				//1. findByNum
-				Student student = studentSurvice.findByNum(students);
+				Student student = studentSurvice.findByNum(students);//students 매개변수를 가진 findByNum메소드를 호출
 				//2. viewOne
 				studentView.view(student);
 			}else {

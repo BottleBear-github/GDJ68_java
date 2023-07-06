@@ -67,7 +67,8 @@ public class StudentSurvice {
 		System.out.println("학생 수 입력");
 		int count = sc.nextInt();
 		Student [] students = new Student[count];
-		
+		//Student 타입의 배열을 students라는 배열변수명으로 count 숫자만큼 만듬
+//		int [] nums = new int[2]; 
 		for(int i=0; i<count; i++) {
 			Student student = new Student();
 			System.out.println("이름을 입력");
@@ -84,9 +85,8 @@ public class StudentSurvice {
 //			student.total=student.kor + student.eng + student.math;
 //			student.avg = student.total / 3.0;
 			students[i]=student;
-
 		}
-		
+		//dddd1234ssd
 		return students;
 		
 
